@@ -1,4 +1,4 @@
-Installing git,python3(while creating image) and mssql(while creating container) in ununtu
+#Installing git,python3(while creating image) and mssql(while creating container) in ununtu
 
 FROM ubuntu
 RUN apt update -y
