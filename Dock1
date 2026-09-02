@@ -1,4 +1,4 @@
-Installing git,tree in ununtu and crearte a sameple file:
+#Installing git,tree in ununtu and crearte a sameple file:
 
 FROM ubuntu
 RUN apt update -y
