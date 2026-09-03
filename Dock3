@@ -1,0 +1,30 @@
+#Dockerfile name should be Dockerfile
+#vi Dockerfile
+
+FROM ubuntu
+RUN apt install -y
+RUN apt install git maven tree -y
+RUN touch file1
+RUN apt install python3 -y
+CMD apt install mysql-server -y  
+COPY index.html /tmp 
+ADD any_software_link /tmp
+WORKDIR /tmp
+LABEL author: Eswar
+ENV course Devops
+ENV learner Eswar
+EXPOSE 8080
+
+
+
+docker build -t img_name:v1 .	--> to create image using docker file
+-t --> tag
+.  -->docker file path
+v1 -->> version of image, if we dont put version it will take as latest
+
+docker images 
+
+docker run -it --name cont_name image_name:v1	--> to create container
+
+docker inspect cont_name |grep LABEL
+echo $course to check the ENV variable
